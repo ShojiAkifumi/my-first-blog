@@ -71,10 +71,10 @@ function checkImg()
 
 function chgImg(ans)
 { 
-  $('#img-box').css('display', 'block');
   $('#moduleName').html('<h3>'+ans+'</h3>');
   var png = canvas.toDataURL();
   document.getElementById("newImg").src = png;
+  $('#img-box').css('display', 'block');
 }
 
 function clearCanvas()

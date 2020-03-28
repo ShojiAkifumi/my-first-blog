@@ -4,25 +4,28 @@ canvas {
     box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
   }
   
-  canvas:active {
-    border:3px solid #66ccff;
-  }
+canvas:active {
+  border:3px solid #66ccff;
+}
   
-  div#img-box{
+div#img-box{
     border:2px solid #000;
     width:400px;
     display: none;
-  }
+}
   
-  .trainData {
+.trainData {
     float: left;
     margin: 5px;
     text-align: center;
-  }
+}
   
-  #pred{text-align: center;}
+#pred{
+  text-align: center;
+  width: 100%;
+}
   
-  #pred button {
+#pred button {
     display: inline-block;
     font-size: 32px;
     width: 200px;
@@ -39,9 +42,9 @@ canvas {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-  }
+}
   
-  #pred button:active {
+#pred button:active {
     position: relative;
     top: 4px;
     left: 4px;

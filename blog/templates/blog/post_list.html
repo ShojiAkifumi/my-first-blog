@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,9 +8,9 @@
     <title>1分で機械学習を体験できるサイト</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/ai.css' %}">
 </head>
 <body>
     <header>
@@ -55,8 +56,10 @@
         </div>
         <h2>教師データ</h2>
         <div class="trainData">
-            <section id="moduleName"></section>
-            <div id="img-box"><img id="newImg"></div>
+            <div>
+                <section id="moduleName"></section>
+                <div id="img-box"><img id="newImg"></div>
+            </div>
         </div>
         <div id="pred"><button>学習!</button></div>
 
@@ -71,6 +74,6 @@
         </div>
     </main>
     <footer><a href="/admin">my admin</a></footer>
-    <script src="canvasScript.js"></script>
+    <script src="{% static 'js/canvasScript.js' %}"></script>
 </body>
 </html>
