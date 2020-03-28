@@ -2,31 +2,63 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azukimochi Django Girls blog</title>
+    <title>1分で機械学習を体験できるサイト</title>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">myBootstrapサンプル</a>
-              </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">myBootstrapサンプル</a>
+                </div>
+                <a href="#" style="float: right;">&lt;&lt;BACK</a>
             </div>
-          </nav>
+        </nav>
+        <ul>
+            <li>bootstrapでフッター、ヘッダーを追加してください</li>
+            <li>データベースと画像のやり取りをできるようにしてください</li>
+            <li>サイバーっぽい背景画像を貼ってください</li>
+            <li>メインデッシュは後ほど..</li>
+            <li>参考サイトのurlは記録</li>
+        </ul>
     </header>
     <main>
         <div>
             <h1><a href="https://tutorial.djangogirls.org/ja/">Django Girls Blog</a></h1>
         </div>
+        <div style="text-align: center;">
+            <div>
+                <label>タイトル:
+                    <input type="text" id="answer" required>　　
+                </label>
+                <button type="button" onclick="clearCanvas()" >クリアー</button>
+            </div>
+            <canvas id="canvassample" width="400" height="400"></canvas>
+            <div id="btn-box">
+                <button type="button" onclick="checkImg()" value="1"  class="btn btn-primary btn-lg">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    追加
+                </button>
+            </div>
+        </div>
+        <h2>教師データ</h2>
+        <div class="trainData">
+            <section id="moduleName"></section>
+            <div id="img-box"><img id="newImg"></div>
+        </div>
+        <div id="pred"><button>学習!</button></div>
 
         <div>
             {% for post in posts %}
@@ -39,5 +71,6 @@
         </div>
     </main>
     <footer><a href="/admin">my admin</a></footer>
+    <script src="canvasScript.js"></script>
 </body>
 </html>
