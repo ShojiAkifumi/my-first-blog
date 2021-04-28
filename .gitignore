@@ -2,6 +2,6 @@
 *~
 /.vscode
 __pycache__
-myvenv
+django-env
 db.sqlite3
 /static
